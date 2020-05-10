@@ -57,3 +57,4 @@ function menuMaker(array){
 }
 
 header.appendChild(menuMaker(menuItems));
+

@@ -135,6 +135,7 @@ function articleMaker(title, date, firstParagraph, secondParagraph, thirdParagra
   let articleSecondParagraph = document.createElement('p');
   let articleThirdParagraph = document.createElement('p');
   let expandButton = document.createElement('span');
+  let button = document.createElement('button');
 
   article.classList.add('article');
   articleDate.classList.add('date');
@@ -142,6 +143,7 @@ function articleMaker(title, date, firstParagraph, secondParagraph, thirdParagra
 
   article.appendChild(articleTitle);
   article.appendChild(articleDate);
+  article.appendChild(button);
   article.appendChild(articleFirstParagraph);
   article.appendChild(articleSecondParagraph);
   article.appendChild(articleThirdParagraph);
@@ -153,10 +155,15 @@ function articleMaker(title, date, firstParagraph, secondParagraph, thirdParagra
   articleSecondParagraph.textContent = secondParagraph;
   articleThirdParagraph.textContent = thirdParagraph;
   expandButton.textContent = 'Expand';
+  button.textContent = 'X';
 
   expandButton.addEventListener('click', function(){
     article.classList.toggle('article-open');
   });
+
+  button.addEventListener('click', function(){
+    article.style.display = 'none';
+  })
 
   return article;
 }
