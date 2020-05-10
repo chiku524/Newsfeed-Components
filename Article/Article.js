@@ -158,12 +158,7 @@ function articleMaker(title, date, firstParagraph, secondParagraph, thirdParagra
     article.classList.toggle('article-open');
   });
 
-  console.log(article.classList);
-  console.log(article);
-
   return article;
 }
-
-articleMaker();
 
 data.forEach(element => articles.appendChild(articleMaker(element.title, element.date, element.firstParagraph, element.secondParagraph, element.thirdParagraph)));
