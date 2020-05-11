@@ -159,6 +159,13 @@ function articleMaker(title, date, firstParagraph, secondParagraph, thirdParagra
 
   expandButton.addEventListener('click', function(){
     article.classList.toggle('article-open');
+    if(article.classList[1] === 'article-open'){
+      gsap.to(article, {height: 400, duration: .5});
+      expandButton.textContent = 'Click to Close';
+    } else {
+      gsap.to(article, {height: 50, duration: .5});
+      expandButton.textContent = 'Click to Expand';
+    }
   });
 
   button.addEventListener('click', function(){

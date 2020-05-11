@@ -51,6 +51,12 @@ function menuMaker(array){
 
   menuButton.addEventListener('click', function(){
     menu.classList.toggle('menu--open');
+    console.log(menu.classList)
+    if(menu.classList[1] === 'menu--open'){
+      gsap.to(menu, {width: 350, duration: .5, display: 'block'});
+    } else if(menu.classList[1] !== 'menu--open'){
+      gsap.to(menu, {width: 0, duration: .5, display: 'none'});
+    }
   })
 
   return menu;

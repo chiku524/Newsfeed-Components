@@ -73,9 +73,6 @@
   transform: translate(-50%);
   background-color: white;
 }
-.article-open {
-  height: 400px;
-}
 button {
   color: red;
   border: 1px solid red;
@@ -94,7 +91,7 @@ button {
   position: fixed;
   top: 75px;
   left: 0;
-  width: 350px;
+  width: 0px;
   height: 100vh;
   /* This give the height 100% of the screen or, '100% of View Height' */
   background-color: #81C784;
